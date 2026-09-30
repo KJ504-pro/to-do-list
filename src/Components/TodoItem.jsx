@@ -1,11 +1,14 @@
 import React, { useState } from 'react'
-import { useTodo } from '../Context/usercontext';
+import useTodoStore from '../ZustandStore/TodoStore';
 
 function TodoItem( todo ) {
     let [todoMsg,setTodoMsg]=useState(todo.todo);
     
     let [isTodoEditable,setIsTodoEditable] = useState(false);
-    const {toggleComplete,updateTodo, deleteTodo}=useTodo();
+    const deleteTodo = useTodoStore((state)=> state.deleteTodo);
+    const updateTodo = useTodoStore((state)=> state.updateTodo);
+    const toggleComplete = useTodoStore((state)=> state.toggleComplete);
+    
     const editTodo=()=>{
         updateTodo(todo.id,todoMsg);
         setIsTodoEditable(false);

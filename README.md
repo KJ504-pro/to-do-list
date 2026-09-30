@@ -1,16 +1,58 @@
-# React + Vite
+# Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A task management application built using React, Zustand, and Tailwind CSS. This application allows users to efficiently manage their daily tasks by creating, updating, deleting, and tracking the completion status of todos.
 
-Currently, two official plugins are available:
+The project focuses on implementing modern React development practices, including component-based architecture and centralized state management using Zustand. Persistent storage is implemented using Zustand Persist and LocalStorage, ensuring that user data remains available even after refreshing or reopening the application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Create new tasks with a unique identifier
+- Update existing tasks
+- Delete tasks from the list
+- Mark tasks as completed or incomplete
+- Persistent task storage using LocalStorage
+- Global state management using Zustand
+- Clean and responsive user interface
+- Component-based React architecture
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- **React** - Frontend library for building user interfaces
+- **Zustand** - Lightweight state management solution for managing application data
+- **Tailwind CSS** - Utility-first CSS framework for responsive styling
+- **Vite** - Fast development and build tool
+- **LocalStorage** - Client-side storage for maintaining task data
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Structure
+src/
+│
+├── Components/
+│ ├── TodoForm.jsx
+│ └── TodoItem.jsx
+│
+├── ZustandStore/
+│ └── coursestore.js
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+
+## State Management
+
+The application uses Zustand to manage the global state of the todo list. The Zustand store contains the task data along with functions responsible for modifying the state.
+
+The store handles:
+
+- Adding new tasks
+- Updating existing tasks
+- Removing tasks
+- Changing task completion status
+
+Zustand Persist middleware is used to synchronize the application state with LocalStorage. This removes the need for manually handling storage operations with React lifecycle methods.
+
+## Installation and Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/your-username/todo-app.git

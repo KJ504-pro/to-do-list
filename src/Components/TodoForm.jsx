@@ -1,9 +1,10 @@
 import React, { useContext, useState } from 'react'
-import { UserContext, useTodo } from '../Context/usercontext';
+
+import useTodoStore from '../ZustandStore/TodoStore';
 
 function TodoForm() {
     let [val,setval]=useState("");
-    let {addTodo} = useContext(UserContext);
+    let addTodo = useTodoStore((state)=> state.addTodo)
     return (
         <form  className="flex" onSubmit={(e)=>{e.preventDefault()
             addTodo(val);
