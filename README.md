@@ -4,6 +4,16 @@ A task management application built using React, Zustand, and Tailwind CSS. This
 
 The project focuses on implementing modern React development practices, including component-based architecture and centralized state management using Zustand. Persistent storage is implemented using Zustand Persist and LocalStorage, ensuring that user data remains available even after refreshing or reopening the application.
 
+## Live Demo
+
+Add your Vercel deployment link here:
+
+https://your-todo-app.vercel.app
+
+## Screenshot
+
+![Todo App Screenshot](./public/screenshot.png)
+
 ## Features
 
 - Create new tasks with a unique identifier
